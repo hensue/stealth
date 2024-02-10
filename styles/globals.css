@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(216, 216, 216, 0);
+  border-radius: 40px;
+  transition: all 2s linear 1s;
+}
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(216, 216, 216, 1);
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.activeSidebarMenu {
+  color: white;
+  background-color: var(--currentColor);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
