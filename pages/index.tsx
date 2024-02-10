@@ -53,12 +53,12 @@ const Home: NextPage = () => {
           }
         </div>
         <div className='fixed bottom-0 w-full h-[30px] flex items-center pl-[20px] border-t border-solid border-1 border-gray-500'>
-          <img   key = {`${item.name}+${index}+${item.type}`} src="./icon-folder.png" className='w-[15px] mr-[10px]' />
+          <img   key = "forDevelopment1" src="./icon-folder.png" className='w-[15px] mr-[10px]' />
           <p className='text-sm text-[gray]'>{`E : >`}</p>
         </div>
       </div>
       <div className={`min-h-[90vh] ${preview ? "w-[25%]": "hidden"}`}>
-        <img  key = {`${item.name}+${index}+${item.type}`} src='/preview_img.png' className='w-full p-5 h-[35%]'/>
+        <img  key = "forDevelopment" src='/preview_img.png' className='w-full p-5 h-[35%]'/>
         <div className='preview_content rounded-xl bg-[#3f4563] h-[65%] flex items-center justify-center'>
           <p>Nothing selected</p>
         </div>
