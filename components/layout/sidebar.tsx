@@ -86,28 +86,28 @@ function Sidebar(props: any) {
             <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 7l3-3 3 3z" /></svg>
           </div>
         </div>
-        <div key={14} className={`pl-4 py-1 mt-2 rounded flex items-center ${selectedButton === 14 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
+        <div key={14}  onClick={() => selectButton(14)} className={`pl-4 py-1 mt-2 rounded flex items-center ${selectedButton === 14 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
           {<CgStopwatch color={selectedButton === 14 ? '#37A3FE' : '#434761'} fontSize={18} className='mr-2' />}
-          <button className={`text-sm text-gray-400 font-semibold`} onClick={() => selectButton(14)}>
+          <button className={`text-sm text-gray-400 font-semibold`}>
             {"Overview"}
           </button>
         </div>
-        <div key={13} className={`pl-4 py-1 rounded flex items-center ${selectedButton === 13 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
+        <div key={13} onClick={() => selectButton(13)} className={`pl-4 py-1 rounded flex items-center ${selectedButton === 13 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
           {<CgTime color={selectedButton === 13 ? '#37A3FE' : '#434761'} fontSize={18} className='mr-2' />}
-          <button className={`text-sm text-gray-400 font-semibold`} onClick={() => selectButton(13)}>
+          <button className={`text-sm text-gray-400 font-semibold`} >
             {"Recents"}
           </button>
         </div>
-        <div key={11} className={`pl-4 py-1 rounded flex items-center ${selectedButton === 11 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
+        <div key={11} onClick={() => selectButton(11)} className={`pl-4 py-1 rounded flex items-center ${selectedButton === 11 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
           {<CgHeart color={selectedButton === 11 ? '#37A3FE' : '#434761'} fontSize={18} className='mr-2' />}
-          <button className={`text-sm text-gray-400 font-semibold`} onClick={() => selectButton(11)}>
+          <button className={`text-sm text-gray-400 font-semibold`} >
             {"Favorites"}
           </button>
         </div>
-        <div className={`justify-between flex items-center ${selectedButton === 12 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
-          <div key={12} className={`pl-4 py-1 rounded flex items-center`}>
+        <div  onClick={() => selectButton(12)} className={`justify-between flex items-center ${selectedButton === 12 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
+          <div key={12}  className={`pl-4 py-1 rounded flex items-center`}>
             {<FiPenTool color={selectedButton === 12 ? '#37A3FE' : '#434761'} fontSize={18} className='mr-2' />}
-            <button className={`text-sm text-gray-400 font-semibold`} onClick={() => selectButton(12)}>
+            <button className={`text-sm text-gray-400 font-semibold`} >
               {"Labels"}
             </button>
           </div>
@@ -119,9 +119,9 @@ function Sidebar(props: any) {
             <span className='text-sm text-gray-400 font-semibold'>Local</span>
           </div>
           {buttons.map((button) => (
-            <div key={button.id} className={`pl-4 py-1 rounded flex items-center ${selectedButton === button.id ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
+            <div onClick={() => selectButton(button.id)} key={button.id} className={`pl-4 py-1 rounded flex items-center ${selectedButton === button.id ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
               {button.icon}
-              <button className={`text-sm text-gray-400 font-semibold`} onClick={() => selectButton(button.id)}>
+              <button className={`text-sm text-gray-400 font-semibold`} >
                 {button.label}
               </button>
             </div>
@@ -134,16 +134,16 @@ function Sidebar(props: any) {
           <div>
             <span className='text-sm text-gray-400 font-semibold'>Devices</span>
           </div>
-          <div key={7} className={`pl-4 py-1 rounded flex items-center ${selectedButton === 7 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
+          <div key={7} onClick={() => selectButton(7)} className={`pl-4 py-1 rounded flex items-center ${selectedButton === 7 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
             {<IoDesktopOutline color={selectedButton === 7 ? '#37A3FE' : '#434761'} fontSize={20} className='mr-2' />}
-            <button className={`text-sm text-gray-400 font-semibold`} onClick={() => selectButton(7)}>
+            <button className={`text-sm text-gray-400 font-semibold`} >
               {"DESKTOP-PN1CE"}
             </button>
           </div>
 
           <div className='pt-3'>
-            <div key={9} className={`${selectedButton === 9 ? 'bg-[#20232A]' : ''}`}>
-              <button className={`className='text-sm py-1 border border-dashed border-gray-600 rounded-sm w-full text-gray-500 font-semibold`} onClick={() => selectButton(9)}>
+            <div onClick={() => selectButton(9)} key={9} className={`${selectedButton === 9 ? 'bg-[#20232A]' : ''}`}>
+              <button className={`className='text-sm py-1 border border-dashed border-gray-600 rounded-sm w-full text-gray-500 font-semibold`} >
                 {"Add Device"}
               </button>
             </div>
@@ -154,15 +154,15 @@ function Sidebar(props: any) {
           <div>
             <span className='text-sm text-gray-400 font-semibold'>Locations</span>
           </div>
-          <div key={8} className={`pl-4 py-1 rounded flex items-center ${selectedButton === 8 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
+          <div key={8} onClick={() => selectButton(8)} className={`pl-4 py-1 rounded flex items-center ${selectedButton === 8 ? 'bg-[#20232A] border border-[#2499FF]' : ''}`}>
             {<BsFolderPlus color={selectedButton === 8 ? '#37A3FE' : '#434761'} fontSize={20} className='mr-2' />}
-            <button className={`text-sm text-gray-400 font-semibold`} onClick={() => selectButton(8)}>
+            <button className={`text-sm text-gray-400 font-semibold`} >
               {"Pictures"}
             </button>
           </div>
           <div className='pt-3'>
-            <div key={10} className={`${selectedButton === 10 ? 'bg-[#20232A]' : ''}`}>
-              <button className={`className='text-sm py-1 border border-dashed border-gray-600 rounded-sm w-full text-gray-500 font-semibold`} onClick={() => selectButton(10)}>
+            <div key={10} onClick={() => selectButton(10)} className={`${selectedButton === 10 ? 'bg-[#20232A]' : ''}`}>
+              <button className={`className='text-sm py-1 border border-dashed border-gray-600 rounded-sm w-full text-gray-500 font-semibold`} >
                 {"Add Location"}
               </button>
             </div>

@@ -17,7 +17,7 @@ const Home: NextPage = () => {
                 // console.log(item)
                 return (
                   <div className='inline-block text-center w-[90px] h-[90px] m-[10px] '>
-                    <img key ={`${item.name}+${index}+${item.type}`} src="./icon-file.png" className='w-[100%]' />
+                    <Image height={90} width={90} key ={`${item.name}+${index}+${item.type}`} src="/icon-file.png" className='w-[100%]' />
                     <p className='text-sm'>{item.name}</p>
                   </div>
                 )
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
                 // console.log(item)
                 return (
                   <div className='text-center inline-block w-[90px] m-[10px]  h-[90px]'>
-                    <img  key = {`${item.name}+${index}+${item.type}`} src="./icon-movie.png" className='w-[100%]' />
+                    <Image height={90} width={90} key = {`${item.name}+${index}+${item.type}`} src="/icon-movie.png" className='w-[100%]' />
                     <p className='text-sm'>{item.name}</p>
                   </div>
                 )
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                 // console.log(item)
                 return (
                   <div className='text-center w-[90px] inline-block m-[10px]  h-[90px]'>
-                    <img  key = {`${item.name}+${index}+${item.type}`} src="./icon-json.png" className='w-[100%]' />
+                    <Image height={90}width={90} key = {`${item.name}+${index}+${item.type}`} src="/icon-json.png" className='w-[100%]' />
                     <p className='text-sm'>{item.name}</p>
                   </div>
                 )
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                 // console.log(item)
                 return (
                   <div className='text-center w-[90px] m-[10px] inline-block h-[90px]'>
-                    <img  key = {`${item.name}+${index}+${item.type}`} src="./icon-folder.png" className='w-[100%]' />
+                    <Image  height={90} width={90} key = {`${item.name}+${index}+${item.type}`} src="/icon-folder.png" className='w-[100%]' />
                     <p className='text-sm'>{item.name}</p>
                   </div>
                 )
@@ -53,12 +53,12 @@ const Home: NextPage = () => {
           }
         </div>
         <div className='fixed bottom-0 w-full h-[30px] flex items-center pl-[20px] border-t border-solid border-1 border-gray-500'>
-          <img   key = "forDevelopment1" src="./icon-folder.png" className='w-[15px] mr-[10px]' />
+          <Image  width={15} height={15} key = "forDevelopment1" src="/icon-folder.png" className='w-[15px] mr-[10px]' />
           <p className='text-sm text-[gray]'>{`E : >`}</p>
         </div>
       </div>
       <div className={`min-h-[90vh] ${preview ? "w-[25%]": "hidden"}`}>
-        <img  key = "forDevelopment" src='/preview_img.png' className='w-full p-5 h-[35%]'/>
+        <Image  width="100%" height="100%" key = "forDevelopment" src='/preview_img.png' className='w-full p-5 h-[35%]'/>
         <div className='preview_content rounded-xl bg-[#3f4563] h-[65%] flex items-center justify-center'>
           <p>Nothing selected</p>
         </div>
